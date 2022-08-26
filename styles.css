@@ -1,0 +1,119 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+html {
+  font-size: 10px;
+}
+body {
+  background: #352f5b;
+  height: 100vh;
+}
+header {
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  margin: 5rem 0 0 0;
+}
+main {
+  display: flex;
+  justify-content: center;
+}
+.wrapper-content {
+  width: calc(100% - 400px);
+  min-width: 300px;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+form {
+  margin-top: 10rem;
+  width: 50rem;
+}
+.wrapper-check {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+input[type="checkbox"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  /* background-color: var(--form-background); */
+  /* Not removed via appearance */
+  margin: 0;
+
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+}
+input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #5844f4;
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
+}
+
+input[type="checkbox"]:focus {
+  outline: max(2px, 0.15em) solid currentColor;
+  outline-offset: max(2px, 0.15em);
+}
+input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+input {
+  font-size: 1.6rem;
+  padding: 1rem;
+  width: 100%;
+  height: 3rem;
+}
+ul {
+  font-size: 2rem;
+  background: #423a6f;
+  width: 100%;
+  border-radius: 1rem;
+  color: white;
+}
+li {
+  border-bottom: 1px solid #352f5b;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 1rem;
+  padding: 1rem;
+}
+li p {
+  word-wrap: break-word;
+}
+.close {
+  cursor: pointer;
+  color: #5844f4;
+}
+.close:hover {
+  color: #ed0000;
+}
+.completed p {
+  text-decoration: line-through;
+  color: #776ace;
+}
