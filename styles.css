@@ -100,7 +100,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 1rem;
+  margin: 0 1rem;
   padding: 1rem;
 }
 li p {
