@@ -69,15 +69,11 @@ input[type="checkbox"]::before {
   transform: scale(0);
   transform-origin: bottom left;
   transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1em #5844f4;
+  box-shadow: inset 1em 1em #54c9f7;
   /* Windows High Contrast Mode */
   background-color: CanvasText;
 }
 
-input[type="checkbox"]:focus {
-  outline: max(2px, 0.15em) solid currentColor;
-  outline-offset: max(2px, 0.15em);
-}
 input[type="checkbox"]:checked::before {
   transform: scale(1);
 }
@@ -109,10 +105,12 @@ li p {
 .close {
   cursor: pointer;
   color: #5844f4;
+  color: #54c9f7;
+  margin: 1px;
+  /* border: 1px solid #fff; */
+  border-radius: 30px;
 }
-.close:hover {
-  color: #ed0000;
-}
+
 .completed p {
   text-decoration: line-through;
   color: #776ace;
